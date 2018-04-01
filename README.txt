@@ -1,8 +1,8 @@
 THIS VERSION OF THE PACKAGE IS A WORK IN PROGRESS!!
 Build: 0.0.1
 
-This is the initial version of the ConstrictR package. The centrality and clustering functions are being withheld 
-until profiled fully.
+This is the initial version of the ConstrictR package. The centrality and clustering functions are being 
+withheld until profiled fully.
 
 Future functions to be added:
 	-Centrality (Full Version)
