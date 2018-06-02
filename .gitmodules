@@ -1,0 +1,3 @@
+[submodule "constrictdocs"]
+	path = constrictdocs
+	url = https://github.com/cnegrich/constrictdocs.git
