@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.18.1" />
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Constrict Project Documentation</title>
+    <link href='/constrictdocs/slate/stylesheets/monokai.css' rel="stylesheet" media="screen" />
+<link href='/constrictdocs/slate/stylesheets/screen.css' rel="stylesheet" media="screen" />
+<link href='/constrictdocs/slate/stylesheets/print.css' rel="stylesheet" media="print" />
+
+    
+<script src='/constrictdocs/slate/javascripts/all.js'></script>
+
+    
+</head>
+<body class="index" data-languages="[ &#34;python&#34; ,  &#34;R&#34; ]">
+    <a href="#" id="nav-button">
+        <span>
+        NAV
+        <img src='/constrictdocs/slate/images/navbar.png'/>
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        
+         <img src='/constrictdocs/images/logo.png' />
+        
+        <div class="lang-selector">
+            
+            <a href="#" data-language-name="python">Python</a>
+            
+            <a href="#" data-language-name="R">R</a>
+            
+        </div>
+         
+        
+        <div class="search">
+            <input type="text" class="search" id="input-search" placeholder='Search'>
+        </div>
+        <ul class="search-results"></ul>
+        
+        <div id="toc">
+        </div>
+         
+        
+        
+
+    </div>
+    <div class="page-wrapper">
+        <div class="dark-box"></div>
+        <div class="content">
+            
+    
+        
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<h1 id="constrict-project">Constrict Project</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The Constrict Project is currently the title of two intertwined projects being handled by one development team. These projects being ConstrictR and ConstrictPy. ConsitrctR is an R package with functions original selected around microbiome analysis, but these functions are useful in analyzing data from many different sources. ConstrictPy is a python tool designed to implement ConstrictR functions and make them as accessible as possible.</p>
+
+<h2 id="philosophy-of-the-constrict-project">Philosophy of the Constrict Project</h2>
+
+<p>Advanced applied mathematics is extremely difficult to understand requiring extensive background knowledge and study. However, the results of applied mathematical analysis are incredibly useful. As a result, for this project, we aim to fill the gaps in knowledge of the mathematics or their implementation to allow any and all users access to the results of these modern methods. We hope to make mathematics accessible and encourage research and exploration of ideas by doing so.</p>
+
+<h2 id="acknowledgements-and-credits">Acknowledgements and Credits</h2>
+
+<p><strong>Our logo is a combination of the r-project&rsquo;s logo (modified) and  logo of the Python Software Foundation, the two languages which power our project. The r-project logo is available <a href="https://www.r-project.org/logo/">here</a> and the Python Software Foundation&rsquo;s is available <a href="https://www.python.org/community/logos/">here</a>. Additionally, this site is generated using Hugo and the DocuAPI theme. This project is only possible thanks to open source development efforts from many people and foundations. We would like to thank them all for making this work possible. We would also like to thank Dr. Cao and the researchers at Arizona State University&rsquo;s Biodesign Institute for their involvement in this project.</strong></p>
+
+<h1 id="constrictpy">ConstrictPy</h1>
+
+<p>A python tool powered by the functions from the ConstrictR package.</p>
+
+<h2 id="background">Background</h2>
+
+<p>ConstrictR (constrictor) is an R package designed to help with the implementation of microbiome analysis. ConstrictPy is a python tool that utilizes all of the features of ConstrictR to allow users to more easily create detailed analysis of their microbiome data. These two items were designed based off the methods from Guidi, <em>et. al.</em>, 2016 and initially implemented and tested on arctic microbiome data. A variety of use cases for these methods and the core of this project is to allow for the less technically experienced users to implement these methods more easily. As well as to design a consistent and comprehensive set of efficient methods for analyzing microbiome data and data with similar network characteristics. <br />
+<br />
+These projects are designed to work together, however ConstrictR can be used as a standalone for other projects. Both ConstrictR and ConstrictPy are ongoing projects. However, the most important features of each is already implemented and both are currently usable.</p>
+
+<h2 id="usage-and-availability">Usage and Availability</h2>
+
+<p>ConstrictPy is currently being redesigned as a tool that can be hosted on any python enabled server. As a result, the current version of the tool is unavailable and will be for approximately a week. However, the source code is still available <a href="https://github.com/ahoetker/ConstrictPy">here</a>.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>These will be available shortly once the web app for our tool has been finalized. Please check back in the coming weeks!</p>
+
+<h2 id="note-on-style">Note on style</h2>
+
+<p>ConstrictPy follows the python style guide known as <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>. With two exceptions of allowing lines of up to 85 characters and single line comments of up to 90 characters.</p>
+
+<h1 id="constrictr">ConstrictR</h1>
+
+<p>An R package designed for use in the analysis of microbiome data.</p>
+
+<h2 id="background-1">Background</h2>
+
+<p>ConstrictR (constrictor) is an R package designed to help with the implementation of microbiome analysis. ConstrictPy is a python tool that utilizes all of the features of ConstrictR to allow users to more easily create detailed analysis of their microbiome data. These two items were designed based off the methods from Guidi, <em>et. al.</em>, 2016 and initially implemented and tested on arctic microbiome data. A variety of use cases for these methods and the core of this project is to allow for the less technically experienced users to implement these methods more easily. As well as to design a consistent and comprehensive set of efficient methods for analyzing microbiome data and data with similar network characteristics. <br />
+<br />
+These projects are designed to work together, however ConstrictR can be used as a standalone for other projects. Both ConstrictR and ConstrictPy are ongoing projects. However, the most important features of each is already implemented and both are currently usable.</p>
+
+<h2 id="installation-1">Installation</h2>
+
+<blockquote>
+<p>Enter the below commands into the R console to import a single function for use.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="o">&gt;</span><span class="kp">setwd</span><span class="p">(</span><span class="s">&quot;C:/FILE_PATH/ConstrictR&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="kn">source</span><span class="p">(</span><span class="s">&quot;C:/FILE_PATH/ConstrictR/FILE.R&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-Shell" data-lang="Shell"><span></span>&gt;R
+&gt;setwd<span class="o">(</span><span class="s2">&quot;C:/FILE_PATH/ConstrictR&quot;</span><span class="o">)</span>
+&gt;source<span class="o">(</span><span class="s2">&quot;C:/FILE_PATH/ConstrictR/FILE.R&quot;</span><span class="o">)</span>
+</code></pre></div>
+
+<blockquote>
+<p>Below is a short script for the importation of all R functions:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="kp">setwd</span><span class="p">(</span><span class="s">&quot;C:/FILE_PATH/ConstrictR&quot;</span><span class="p">)</span>
+fileList <span class="o">&lt;-</span> <span class="kp">ls</span><span class="p">()</span>
+file.sources <span class="o">=</span> <span class="kp">list.files</span><span class="p">(</span>pattern<span class="o">=</span><span class="s">&quot;*.R&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-Shell" data-lang="Shell"><span></span>&gt;R
+setwd<span class="o">(</span><span class="s2">&quot;C:/FILE_PATH/ConstrictR&quot;</span><span class="o">)</span>
+fileList &lt;- ls<span class="o">()</span>
+file.sources <span class="o">=</span> list.files<span class="o">(</span><span class="nv">pattern</span><span class="o">=</span><span class="s2">&quot;*.R&quot;</span><span class="o">)</span>
+</code></pre></div>
+
+<p>In order for the package to work, you need to have Rv3.4.4 installed. This package was designed to allow each function to be imported individually as needed. To use individual functions, first clone the github repository. Once you have the package files saved locally, the package can be imported in the R console by using commands seen under the R and shell tabs on the right.</p>
+
+<h2 id="usage">Usage</h2>
+
+<blockquote>
+<p>Import data as a data frame in the R console for analysis:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="o">&gt;</span><span class="kp">setwd</span><span class="p">(</span><span class="s">&quot;C:/FILE_PATH_TO_DATA&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span>test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="kp">is.data.frame</span><span class="p">(</span>test_data<span class="p">)</span>
+</code></pre></div>
+
+<p>Once the package files are sourced, you only need to import your data into an R data frame and begin calling functions on it. An R data frame is an abstract object which contains all of your data in a table, matrix, list, or similar structure as well as names for the rows and columns. All of the functions are designed with multiple optional parameters to allow for more customized analysis, but have the most common options stored as defaults. This will allow a less experienced user to simply call the function on the data frame without having to specify any additional parameters. An example is available under the R tab on the right. It is important to note here that both the data frame import and the functions expect the data frame to be free of special characters.</p>
+
+<h2 id="note-on-style-1">Note on Style</h2>
+
+<p>We follow the google R style guide available <a href="https://google.github.io/styleguide/Rguide.xml">here</a>. With a few exceptions. We have a maximum line length of 85 characters and prefer camel case variable names.</p>
+
+<h1 id="constrictr-functions">ConstrictR Functions</h1>
+
+<p>The following is the documentation on each currently available function in partial alphabetical order. The functions below may be manually implemented with the full algorithm encoded by in the function or wrappers which change the parameters for the functions built into the base of R. But none are dependent on external R packages or libraries.</p>
+
+<h2 id="banner">Banner</h2>
+
+<blockquote>
+<p>Usage of the banner function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Banner</span>
+banner <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1"># ASCII Art Generated at http://www.network-science.de/ascii/ (Font: Big)</span>
+<span class="c1">#      _____                _               _   _____</span>
+<span class="c1">#    /  ____|              | |      ( )    | | |  __ \</span>
+<span class="c1">#    | |     ___  ____  ___| |_ _ __ _  ___| |_| |__) |</span>
+<span class="c1">#    | |    / _ \|  _ \/ __| __|  __| |/ __| __|  _  /</span>
+<span class="c1">#    | |___| |_| | | | \__ \ |_| |  | | (__| |_| | \ \</span>
+<span class="c1">#     \_____\___/|_| |_|___/\__|_|  |_|\___ \__|_|  \_\</span>
+<span class="c1">#</span>
+<span class="c1">#     Author:  Christopher Negrich</span>
+<span class="c1">#     Contact: cnegrich@gmail.com</span>
+<span class="c1">#     github:  github.com/cnegrich</span>
+  <span class="kp">print</span><span class="p">(</span><span class="s">&quot;        ConstrictR</span>
+<span class="s">         Author:  Christopher Negrich</span>
+<span class="s">         Contact: cnegrich@gmail.com</span>
+<span class="s">         github:  github.com/cnegrich&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># There is a different banner for python, go check the source code or go view the R banner code available in the other tab.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+A simple banner function for printing the package name and author credits.
+<br />
+<strong>Required Parameters:</strong> <br />
+None.
+<br />
+<strong>Optional Parameters:</strong> <br />
+None.
+<br />
+<strong>Mathematics:</strong> <br />
+A lot, trust me.
+<br />
+<strong>Note:</strong><br />
+Pretty.</p>
+
+<h2 id="correlation">Correlation</h2>
+
+<blockquote>
+<p>Usage of correlation function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\corr.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the correlation wrapper function on the data frame</span>
+corr<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters to change the correlation method</span>
+corr<span class="p">(</span>test_data<span class="p">,</span> type<span class="o">=</span><span class="s">&#39;spearman&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+A wrapper function for the Rv3.4.4 correlation function. The wrapper is designed to bring this function into uniformity with the other functions used in the package. It reduces the required parameters to be only the data frame.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+type=&lsquo;pearson&rsquo;: Type of correlation, default is Pearson correlation, however it may also be changed to &lsquo;spearman&rsquo; or &lsquo;kendall&rsquo; for the Spearman and Kendall-Tau correlation methods, respectively. <br />
+verbose=FALSE: Change to print verbose results to console as well as return.
+<br />
+<strong>Mathematics:</strong> <br />
+Calculate the Pearson&rsquo;s correlation coefficient:</p>
+
+<p>$$p_{xy} = \frac{ S(x,y) }{S(x)S(y)}$$</p>
+
+<p>where $S(x,y)$ is the sample covariance and $S(x)$, $S(y)$ are the sample standard deviations.
+<br />
+Calculate the Spearman&rsquo;s correlation coefficient: <br />
+$$SP(rx, ry) = \frac{ SC(rx,ry) }{SD(rx)SD(ry)}$$
+where $SC(rx,ry)$ is the sample covariance on the ranked list of the raw sample and $SD(rx)$, $SD(ry)$ are the sample standard deviations on the ranked lists of the raw sample.
+<br />
+Calculate the Kendall-Tau correlation coefficient: <br />
+$$KT = \frac{1}{n(n-1)} \Sigma_{i \neq j} sgn(x_i-x_j)sgn(y_i-y_j)$$
+where $n$ is the number of entries in the list and $sgn()$ is the sign function.</p>
+
+<h2 id="covariance">Covariance</h2>
+
+<blockquote>
+<p>Usage of the covariance function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\covar.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the covariance wrapper function on the data frame</span>
+cov<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters to change the method for handling missing data</span>
+cov<span class="p">(</span>test_data<span class="p">,</span> method<span class="o">=</span><span class="s">&#39;all.obs&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+A wrapper function for the Rv3.4.4 covariance function. The wrapper is designed to bring this function into uniformity with the other functions used in the package. It reduces the required parameters to be only the data frame.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+method=&lsquo;complete.obs&rsquo;: Method for handling missing data within the data frame. The default is complete meaning all missing values are handled by casewise deletion. This may be changed to &lsquo;all.obs&rsquo; if any missing data should produce an error.<br />
+verbose=FALSE: Change to print verbose results to console as well as return.<br />
+<br />
+<strong>Mathematics:</strong> <br />
+Calculate the covariance: \</p>
+
+<p>$$\sigma_{xy} = \frac{1}{N} \Sigma (x_i - \mu_x) (y_i - \mu_y) $$</p>
+
+<p>where $N$ is the total population and $\mu_x$, $\mu_y$ are the population means.</p>
+
+<h2 id="descriptive-statistics">Descriptive Statistics</h2>
+
+<blockquote>
+<p>Usage of the descriptive statistics function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\desc_stats.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the descriptive statistics function on the data frame</span>
+desc_stats<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters if your data is organized differently</span>
+desc_stats<span class="p">(</span>test_data<span class="p">,</span> column<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+Calculates the basic descriptive statistics of a data frame. These statistics include minimum, maximum, range, median, mean, variance, standard deviation, and standard error. Each of these statistics is calculated across all trails for each measure in the table.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+column=TRUE: Change if the table is organized row-wise rather than column-wise. Where a column-wise table is a table where each row is a trial and each column is a different measure. <br />
+verbose=FALSE: Change to print verbose results to console as well as return.<br />
+<br />
+<strong>Mathematics:</strong> <br />
+Calculate the variance:</p>
+
+<p>$$Var(X) = \sigma_x^2 = E[(X-\mu)^2]$$</p>
+
+<p>where $E[X]$ is the expected value of $X$ and $\mu$ is the mean.
+<br />
+Calculate the standard deviation:</p>
+
+<p>$$\sigma_{x} = \sqrt{\frac{\Sigma(x_i - \mu)^2}{N-1}} $$</p>
+
+<p>where $N$ is the total number of entries and $\mu$ is the mean.
+<br />
+Calculate the standard error:</p>
+
+<p>$$\sigma_{\dot{x}} = \frac{\sigma_x}{\sqrt{n}}$$</p>
+
+<p>where $n$ is the total number of entries and $\sigma_x$ is the standard deviation.</p>
+
+<h2 id="data-frame-rank">Data Frame Rank</h2>
+
+<blockquote>
+<p>Usage of the data frame rank function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\df_rank.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the rank wrapper function on the data frame</span>
+df_rank<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters as required</span>
+df_rank<span class="p">(</span>test_data<span class="p">,</span> column<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> method<span class="o">=</span><span class="s">&#39;min&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+A wrapper function for the Rv3.4.4 rank function. The wrapper is designed to bring this function into uniformity with the other functions used in the package. It reduces the required parameters to be only the data frame. Additionally, this wrapper is modified to be called on each row or column within the data frame and return a single data frame rather than many lists. This wrapper bring rank into uniformity with with functions and removes the need to repeatedly call this function on the same data frame.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+na=&lsquo;keep&rsquo;: Method for handling NaN (not a number) data, the default is to keep the NA entries ranked. If the parameter is set to TRUE, NA data is put last, if FALSE, NA data is put first, and if &lsquo;NA&rsquo;, NA data is removed. <br />
+method=&lsquo;average&rsquo;: Method for handling ties in the ranking, the default is to average the entries. Other options include &lsquo;first&rsquo;, &lsquo;last&rsquo;, &lsquo;min&rsquo;, &lsquo;max&rsquo;, and &lsquo;random&rsquo;. <br />
+column=TRUE: Change if the table is organized row-wise rather than column-wise. Where a column-wise table is a table where each row is a trial and each column is a different measure. <br />
+verbose=FALSE: Change to print verbose results to console as well as return.<br />
+<br />
+<strong>Mathematics:</strong> <br />
+The algorithm for determining rank varies slightly based on the chosen method of ties. The algorithm computes the simple rank of the values with respect to the chosen method for tie resolution.</p>
+
+<h2 id="sparse">Sparse</h2>
+
+<blockquote>
+<p>Usage of the sparse function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span>\begin<span class="p">{</span>verbatim<span class="p">}</span>
+<span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\df_rank.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the sparse function on the data frame</span>
+sparse<span class="p">(</span>test_data<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+This function will return TRUE or FALSE based on the character of the data frame. In this function, a data frame is considered sparse if there is an infinite, empty, or zero, row or column within the data frame. This definition was created in order to profile the different algorithms on sparse and non-sparse data sets. There are many different definitions of sparse throughout data science and mathematics and this will not conform with all definitions of sparse. For a more information rich measure see the sparsity function which will return a decimal representation of the percentage of missing, infinite, or zero data.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+None.
+<br />
+<strong>Mathematics:</strong> <br />
+Network analysis definition: A network is sparse if the limit from $n$ to infinity of $ \frac{c}{n-1} $ is non-zero. Where $c$ is the mean degree and $n$ is the number of nodes in the network.
+<br />
+An accepted data science definition: A network or matrix is sparse if the sparsity is greater than $.5$. Alternatively stated, a network is sparse if over half of the entries are zero, NA, or infinity.
+<br />
+Algorithm based definition (ConstrictR developed definition): A matrix is sparse if and only if a row or column contains only zero, NA, or infinite entries.</p>
+
+<h2 id="sparsity">Sparsity</h2>
+
+<blockquote>
+<p>Usage of the sparsity function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\df_rank.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the sparsity function on the data frame</span>
+sparsity<span class="p">(</span>test_data<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+This function will return a decimal representation of the percentage of missing, infinite, or zero data in a data frame.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+None.
+<br />
+<strong>Mathematics:</strong> <br />
+Sparsity$=\frac{i}{n}$ where $i$ is the number of zero, NA, or infinite entries and $n$ is the total number of entries.</p>
+
+<h2 id="weighted-adjacency-matrix">Weighted Adjacency Matrix</h2>
+
+<blockquote>
+<p>Usage of the advanced weighted adjacency matrix function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\adj_matrix.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the weighted adjacency matrix function on the test data frame</span>
+adj_matrix<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters</span>
+adj_matrix<span class="p">(</span>test_data<span class="p">,</span> thresh<span class="o">=</span><span class="m">9</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+Creates a weighted adjacency matrix from the correlation within the data frame. This function is the first portion of weighted correlation network analysis. This function will return the weighted signed adjacency matrix and the weighted correlation network analysis will return the topological overlap matrix.
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+signed=TRUE: Whether to use the signed or unsigned matrix in the calculation of the adjacency matrix. <br />
+thresh$=12$: Threshold parameter, recommended 6 or 12, for unsigned and signed matrices respectively, may alternatively use the scale-free network criterion to determine. <br />
+verbose=FALSE: Change to print verbose results to console as well as return results.
+<br />
+<strong>Mathematics:</strong> <br />
+Start by creating the unsigned correlation matrix:</p>
+
+<p>$$ s^{unsigned}_{ij} = |correlation(x_i,x_j)| $$</p>
+
+<p>Create the signed correlation matrix:</p>
+
+<p>$$ s^{signed}_{ij} = 0.5+0.5correlation(x_i,x_j) $$</p>
+
+<p>Create the adjacency matrix:</p>
+
+<p>$$ adj = (s^{signed}_{ij})^{\beta}$$</p>
+
+<p>or</p>
+
+<p>$$ adj = (s^{unsigned}_{ij})^{\beta} $$</p>
+
+<p>where $Adj = [adj_{ij}]$ is the final adjacency matrix and $\beta$ is the input thresholding parameter.</p>
+
+<h2 id="wgcna-weighted-correlation-network-analysis">WGCNA (Weighted Correlation Network Analysis)</h2>
+
+<blockquote>
+<p>Usage of the WGCNA function:</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span></span><span class="c1"># Import function</span>
+<span class="kn">source</span><span class="p">(</span>C<span class="o">:</span>\Users\Windows\ConstrictR\adj_matrix.R<span class="p">)</span>
+<span class="c1"># Create the test data frame</span>
+test_data <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;test.csv&quot;</span><span class="p">)</span>
+<span class="c1"># Call the weighted adjacency matrix function on the test data frame</span>
+wgcna<span class="p">(</span>test_data<span class="p">)</span>
+<span class="c1"># Optionally change the default parameters to change the threshold</span>
+wgcna<span class="p">(</span>test_data<span class="p">,</span> thresh<span class="o">=</span><span class="m">12</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># Imported into the python tool through Rpy2 and called as need, please refer to the source code for more details or see the R tab for the R usage example.</span>
+</code></pre></div>
+
+<p><strong>Description:</strong> <br />
+Follows the full standard weighted correlation network analysis algorithm, terminating after calculating the Topological Overlap Matrix (TOM).
+<br />
+<strong>Required Parameters:</strong> <br />
+df: data frame
+<br />
+<strong>Optional Parameters:</strong> <br />
+signed=TRUE: Whether to use the signed or unsigned matrix in the calculation of the adjacency matrix. <br />
+thresh$=12$: Threshold parameter, recommended 6 or 12, for unsigned and signed matrices respectively, may alternatively use the scale-free network criterion to determine. <br />
+verbose=FALSE: Change to print verbose results to console as well as return results.
+<br />
+<strong>Mathematics:</strong> <br />
+Start by creating the unsigned correlation matrix:</p>
+
+<p>$$ s^{unsigned}_{ij} = |correlation(x_i,x_j)| $$</p>
+
+<p>Create the signed correlation matrix:</p>
+
+<p>$$ s^{signed}_{ij} = 0.5+0.5correlation(x_i,x_j) $$</p>
+
+<p>Create the adjacency matrix:</p>
+
+<p>$$ adj = (s^{signed}_{ij})^{\beta}$$</p>
+
+<p>or</p>
+
+<p>$$ adj = (s^{unsigned}_{ij})^{\beta} $$</p>
+
+<p>where $Adj = [adj_{ij}]$ is the final adjacency matrix and $\beta$ is the input thresholding parameter. <br />
+<br />
+Compute the Topological Overlap Matrix: <br />
+if $i \neq j$,</p>
+
+<p>$$ t[ij] = \frac{l[ij] + a[ij]}{min(k[i],k[j]) + 1 - a[ij]} $$</p>
+
+<p>where</p>
+
+<p>$$l[ij] = \Sigma_u a[iu]a[uj]$$</p>
+
+<p>$$k[i]= \Sigma_u a[iu]$$</p>
+
+<p>else, $t[ij]=1$, this results in all $1$&rsquo;s on the diagonal.</p>
+
+<h1 id="about-us">About Us</h1>
+
+<h2 id="christopher-negrich">Christopher Negrich</h2>
+
+<p>Christopher is the project leader and professional software developer working on both the R and Python portions of the project. <br />
+Contact Information: <br />
+Github: <a href="https://github.com/cnegrich">cnegrich</a> <br />
+Site: <a href="christophernegrich.com">Christopher Negrich</a></p>
+
+<h2 id="andrew-hoetker">Andrew Hoetker</h2>
+
+<p>Andrew is a chemical engineering student and python developer working on expanding the usability and efficiency of the ConstrictPy tool. <br />
+Contact Information: <br />
+Github: <a href="https://github.com/ahoetker">ahoetker</a></p>
+
+<h2 id="gabriel-batres">Gabriel Batres</h2>
+
+<p>Gabriel is an R developer and mathematics student working on expanding the scope of the R package while maintaining usability.</p>
+
+<h2 id="huansheng-cao-phd">Huansheng Cao, PhD</h2>
+
+<p>Dr. Cao is the principal investigator and creator of the project.<br />
+<a href="https://isearch.asu.edu/profile/3157757">Contact Information Available Here</a></p>
+
+    
+
+        </div>
+        <div class="dark-box">
+            
+            <div class="lang-selector">
+                
+                <a href="#" data-language-name="python">Python</a>
+                
+                <a href="#" data-language-name="R">R</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

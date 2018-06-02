@@ -1,0 +1,6 @@
+config.toml
+/content/*
+/layouts/*
+/themes/*
+/archetypes/*
+/data/*
