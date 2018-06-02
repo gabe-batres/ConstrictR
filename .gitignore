@@ -1,6 +1,11 @@
+# Ignore excess hugo files
 config.toml
 /content/*
 /layouts/*
 /themes/*
 /archetypes/*
 /data/*
+# Ignore certain R files
+.RData
+.Rhistory
+test.csv
