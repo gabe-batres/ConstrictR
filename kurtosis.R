@@ -7,21 +7,32 @@
 # Required Parameters: df:dataframes
 # Optional Parameters: 
 
-kurtosis <- function(df) {
+kurtosis <- function(df,column=TRUE,verbose=FALSE) {
   # Assume df is a dataframe, want a matirx.
   df <- data.matrix(df)
-  
-  # Variables to kurtosis equation
-  n <-length(df[,1])
-  # Assume each column gives a different statistics
-  xavg <- colMeans(df)
-  
-  k <- (n(n + 1)(n - 1)) / ((n - 2)(n - 3)) *
-    sum((apply(df, MARGIN = 1, 
-               function(x) {x - xavg})) ^ 4) /
-    (sum((apply(df, MARGIN = 1,
-               function(x) {x - xavg})) ^ 2))^2
-  
-  return(k)
+  if (column=TRUE){
+    n <- length(df[,1])
+    xavg <- colMeans(df)
+    
+    k <- (n(n + 1)(n - 1)) / ((n - 2)(n - 3)) *
+      sum((apply(df, MARGIN = 1, 
+                 function(x) {x - xavg})) ^ 4) /
+      (sum((apply(df, MARGIN = 1,
+                  function(x) {x - xavg})) ^ 2))^2
+    
+    return(k)
+  } else {
+    # Variables to kurtosis equation
+    n <-length(df[1,])
+    xavg <- rowMeans(df)
+    # Assume each column gives a different statistics
+    k <- (n(n + 1)(n - 1)) / ((n - 2)(n - 3)) *
+      sum((apply(df, MARGIN = 2, 
+                 function(x) {x - xavg})) ^ 4) /
+      (sum((apply(df, MARGIN = 2,
+                  function(x) {x - xavg})) ^ 2))^2
+    
+    return(k)
+  }
 }
 
