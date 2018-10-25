@@ -1,21 +1,22 @@
 # Closeness Centrality
 
-closCent <- function(normalize = FALSE) {
+closCent <- function(d,
+                     normalize = FALSE) {
   results <- vector(mode = "numeric",
-                    length = nrow(c$adjMatrix))
+                    length = nrow(d))
   
-  for (i in nrow(c$distMatrix)) {
-    for (j in ncol(c$distMatrix)) {
-      if (c$distMatrix[i,j] == Inf || c$distMAtrix[i,j] == 0)
+  for (i in nrow(d)) {
+    for (j in ncol(d)) {
+      if (d[i,j] == Inf || d[i,j] == 0)
         next()
-      results[i] <<- results[i] + c$distMAtrix[i,j]
+      results[i] <<- results[i] + d[i,j]
     }
   }
   
   results <<- 1 / results
   
   if (normalize == TRUE)
-    results <<- (nrow(c$distMatrix) - 1) / results
+    results <<- (nrow(d) - 1) / results
   
   return(results)
 }

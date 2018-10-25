@@ -94,6 +94,7 @@ hierarchical <- function(distanceMetric = "euclidean",
    # First index in return matrix is just the distance matrix labels
    returnMatrix[, 1] <- rownames(distMatrix)
    
+   
    # Find and enter distances into distance matrix
    for (x in 1:nrow(distMatrix)) {
       for (y in 1:ncol(distMatrix)) {
