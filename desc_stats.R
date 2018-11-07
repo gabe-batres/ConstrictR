@@ -231,6 +231,8 @@ stdDeviation <- function(df,
 }
 
 
+
+
 # Kurtosis ------------------------------------------------------------
 #
 # Description: Implements sample Kurtosis. Implementation from macroption.com.
@@ -287,7 +289,7 @@ skew <- function(df,
    if (is.data.frame(df)) {
       df <- readData(df, column)
    }
-   if (!column) {
+   if (is.matrix(df) && !column) {
       df <- t(df)
    }
    
@@ -303,8 +305,7 @@ skew <- function(df,
    denominator <- sapply(1:NCOL(df),
                          function(i) { (sum((df[,i] - xavg[i]) ^ 2))^(2/3) })
    
-   skewResults <- ns * sapply(1:NCOL(df),
-                              function(i) {numerator[i] / denominator[i]})
+   skewResults <- ns * numerator / denominator
    
    names(skewResults) <- colnames(df)
    
@@ -316,10 +317,43 @@ skew <- function(df,
 }
 
 
+med <- function(vectData) {
+   # Sort the data in ascending order
+   vectData <- sort(vectData)
+   # Calculate the middle index point
+   center <- ceiling(length(vectData) / 2)
+   
+   # Return median
+   if ((length(vectData) %% 2) == 0) {
+      # If even, take average of two middle most numebers
+      sum(vectData[(center - 1):center]) / 2
+   } else {
+      # If odd take the centermost number
+      vectData[center]
+   }
+}
+
+firstQuart <- function(vect) {
+   sData <- sort(vect)
+   
+   median(sData[1:floor(length(sData)/2)])
+}
+
+thirdQuart <- function(vectData) {
+   sData <- sort(vectData)
+   
+   median(sData[(floor(length(sData) / 2) + 1):length(sData)])
+}
+
+
+
+
+
+
 # Descriptive Statistics Function -------------------------------------
 descStats <- function(df,
-                      column = TRUE,
-                      verbose = FALSE) {
+                column = TRUE,
+                verbose = FALSE) {
    if (is.data.frame(df)) {
       df <- readData(df, column)
    }
@@ -327,24 +361,43 @@ descStats <- function(df,
       df <- t(df)
    }
    
-   s <- new.env()
+   results <- matrix(data = NaN, nrow = 14, ncol = ncol(df))
+   colnames(results) <- colnames(df)
+   rownames(results) <- c("Minimum  :",
+                          "Maximum  :",
+                          "Range    :",
+                          "Mean     :",
+                          "Median   :",
+                          "Mode     :",
+                          "1st Quart:",
+                          "3rd Quart:",
+                          "IQ Range :",
+                          "Variance :",
+                          "Std Dev  :",
+                          "Std Error:",
+                          "Kurtosis :",
+                          "Skew     :")
    
-   s$min <- minMaxWrapper(df, type = "Min")
-   s$max <- minMaxWrapper(df, type = "Max")
-   s$range <- rangeFunction(df)
-   #s$median <-
-   s$mean <- meanWrapperFunction(df)
-   s$var <- sampleVariance(df)
-   s$sd <- stdDeviation(df)
-   #s$se <-
-   s$kurt <- kurtosis(df)
-   s$skew <- skew(df)
+   results[1,] <- apply(df, 2, min)
+   results[2,] <- apply(df, 2, max)
+   results[3,] <- results[2,] - results[1,]
+   results[4,] <- colMeans(df)
+   results[5,] <- apply(df, 2, function(c) { med(c) })
+   #results[6,] <- mode
+   results[7,] <- apply(df, 2, function(c) { firstQuart(c) })
+   results[8,] <- apply(df, 2, function(c) { thirdQuart(c) })
+   results[9,] <- results[8, ] - results[7, ]
+   results[10,] <- sampleVariance(df)
+   results[11,] <- stdDeviation(df)
+   results[12,] <- results[11,] / sqrt(nrow(df))  # make function
+   results[13,] <- kurtosis(df)
+   results[14,] <- skew(df)
+   
    
    # Print and return results
    if (verbose == TRUE) {
-      print("Objects in returned environment:", quote = FALSE)
-      print(objects(s))
+      print(results)
    }
    
-   s
-} # End desc_stats function
+   results
+}
